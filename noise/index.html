@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlueTooth</title>
+</head>
+<body>
+  <div id="log"></div>
+  <h1 id= "bt">Bluetooth</h1>
+  <script>
+    function log(text){
+      var h= document.createElement("H1");
+      h.textContent= text;
+      document.getElementById("log").addChild(h);
+    }
+    function log2(text) {
+      var h = document.createElement("H1");
+      var t = document.createTextNode(text);
+      h.appendChild(t);
+      document.body.appendChild(h);
+    }
+    if( navigator.bluetooth ){
+      console.log("bluetooth available");
+      document.getElementById("bt").textContent= "bluetooth available";
+      log2("bluetooth available");
+    }
+    else{
+      console.log("bluetooth NOT available");
+      //document.getElementById("bt").textContent= "bluetooth NOT available";
+      log2("bluetooth NOT available");
+    }
+  </script>
+</body>
+</html>
