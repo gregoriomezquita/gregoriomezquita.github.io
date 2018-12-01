@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlueTooth</title>
+</head>
+<body>
+  <h1 id= "bt">Bluetooth</h1>
+  <script>
+    if( navigator.bluetooth ){
+      console.log("bluetooth available");
+      document.getElementById("bt").textContent= "bluetooth available";
+    }
+    else{
+      console.log("bluetooth NOT available");
+      document.getElementById("bt").textContent= "bluetooth NOT available";
+    }
+  </script>
+</body>
+</html>
